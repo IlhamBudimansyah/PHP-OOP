@@ -50,7 +50,7 @@ class Dosen extends Pengguna
     // Metode untuk mendapatkan informasi dosen, termasuk nama dan mata kuliah yang diampu
     public function getDosen()
     {
-        return "Nama : " . $this->nama . "<br> Matkul : " . $this->matkul;
+        return "<br>Nama : " . $this->nama . "<br> Matkul : " . $this->matkul;
     }
 }
 
@@ -82,7 +82,7 @@ echo "Fitur Dosen : " . $dosen->aksesFitur();
 $mhs = new Mahasiswa("Ilham");
 
 // Memanggil metode aksesFitur untuk objek mahasiswa dan mencetak hasilnya
-echo "Fitur Mahasiswa : " . $mhs->aksesFitur();
+echo "<br>Fitur Mahasiswa : " . $mhs->aksesFitur();
 
 // Memanggil metode getDosen untuk mendapatkan informasi dosen dan mencetak hasilnya
 echo $dosen->getDosen();
