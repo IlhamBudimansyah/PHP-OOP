@@ -37,7 +37,7 @@ $mhs1 = new Mahasiswa("Ilham Budimansyah", "230302013", "Komputer dan Bisnis");
 echo $mhs1->tampilkanData();
 ?>
 ```
-![Class and Object](PWEB S3.1/Jobsheet 1/assets/Class and Object.png)
+![Class and Object](ilham/PWEB S3.1/Jobsheet 1/assets/Class and Object.png)
 ## Encapsulation
 ```php
 <?php
