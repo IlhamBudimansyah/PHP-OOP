@@ -1,7 +1,7 @@
 # DOKUMENTASI OOP JOBSHEET 2
 Pemrograman berorientasi objek (Inggris: object-oriented programming disingkat OOP) merupakan paradigma pemrograman berdasarkan konsep "objek", yang dapat berisi data, dalam bentuk field atau dikenal juga sebagai atribut; serta kode, dalam bentuk fungsi/prosedur atau dikenal juga sebagai method. Semua data dan fungsi di dalam paradigma ini dibungkus dalam kelas-kelas atau objek-objek. Bandingkan dengan logika pemrograman terstruktur. Setiap objek dapat menerima pesan, memproses data, dan mengirim pesan ke objek lainnya
 
-## Class and Object
+## Membuat Class dan Object
 ```php
 <?php
 // Definisi Class Mahasiswa
@@ -33,7 +33,8 @@ echo $mhs1->tampilkanData();
 ?>
 ```
 ![Class and Object](Jobsheet-1/assets/MembuatClassAndObject.png)
-## Encapsulation
+
+## Implementasi Constructor
 ```php
 <?php
 // Mendefinisikan kelas Mahasiswa
@@ -105,7 +106,7 @@ echo $mhs1->getJurusan();
 ```
 ![Class and Object](Jobsheet-1/assets/Implementasi.png)
 
-## Inheritance
+## Membuat Metode Tambahan
 ```php
 <?php
 
@@ -168,108 +169,112 @@ echo $dosen->getDosen(); // Menampilkan informasi dosen ke layar
 ```
 ![Class and Object](Jobsheet-1/assets/MetodeTambahan.png)
 
-
-## Polymorphism
+## Penggunaan Atribut dan Metode
 ```php
-
 <?php
-
-// Definisi Kelas Pengguna
-// Membuat kelas Pengguna yang merepresentasikan entitas umum dari pengguna
-class Pengguna
+// Definisi Class Mahasiswa
+// Membuat kelas Mahasiswa yang merepresentasikan entitas mahasiswa
+class Mahasiswa 
 {
-    // Atribut protected, hanya dapat diakses oleh kelas ini dan kelas turunan
-    protected $nama; // Properti yang menyimpan nama pengguna
+    // Atribut atau Properties
+    // Atribut ini bersifat public sehingga dapat diakses dari luar kelas
+    public $nama;    // Properti yang menyimpan nama mahasiswa
+    public $nim;     // Properti yang menyimpan nomor induk mahasiswa (NIM)
+    public $jurusan; // Properti yang menyimpan jurusan mahasiswa
 
-    // Konstruktor untuk menginisialisasi atribut nama
-    public function __construct($nama)
+    // Constructor
+    // Constructor ini digunakan untuk menginisialisasi objek dengan nilai awal untuk nama, nim, dan jurusan
+    public function __construct($nama, $nim, $jurusan)
     {
-        $this->nama = $nama; // Inisialisasi properti $nama dengan nilai parameter $nama
+        // Mengatur nilai properti berdasarkan parameter yang diterima
+        $this->nama = $nama;       // Inisialisasi properti $nama dengan nilai parameter $nama
+        $this->nim = $nim;         // Inisialisasi properti $nim dengan nilai parameter $nim
+        $this->jurusan = $jurusan; // Inisialisasi properti $jurusan dengan nilai parameter $jurusan
     }
 
-    // Metode untuk mendapatkan nilai nama
-    public function getNama()
+    // Metode atau Function
+    // Metode ini menampilkan data mahasiswa dalam bentuk string
+    public function tampilkanData()
     {
-        return $this->nama; // Mengembalikan nilai properti $nama
+        // Mengembalikan string yang berisi informasi nama, nim, dan jurusan mahasiswa
+        return "Nama : $this->nama <br> NIM : $this->nim <br> Jurusan : $this->jurusan";
     }
 
-    // Metode untuk mengakses fitur, dapat di-overridden oleh kelas turunan
-    public function aksesFitur()
+    // Metode untuk mengubah jurusan mahasiswa
+    public function updateJurusan($jurusan)
     {
-        return "Mengakses Fitur"; // Mengembalikan string default untuk akses fitur
+        // Mengubah nilai $jurusan dengan parameter $jurusan baru yang diberikan
+        $this->jurusan = $jurusan;
+    }
+
+    // Metode untuk mengubah NIM mahasiswa
+    public function setNim($nimbaru)
+    {
+        // Mengubah nilai $nim dengan parameter $nimbaru yang diberikan
+        $this->nim = $nimbaru;
     }
 }
 
-// Definisi Kelas Dosen yang merupakan turunan dari kelas Pengguna
-// Kelas Dosen mewarisi properti dan metode dari kelas Pengguna
-class Dosen extends Pengguna
-{
-    // Atribut private, hanya dapat diakses oleh kelas ini
-    private $matkul; // Properti yang menyimpan mata kuliah yang diampu oleh dosen
+// Instansiasi Objek
+// Membuat objek baru dari kelas Mahasiswa dan memberikan nilai awal untuk nama, nim, dan jurusan
+$mhs1 = new Mahasiswa("Ilham Budimansyah", "230302013", "Komputer dan Bisnis");
 
-    // Konstruktor untuk menginisialisasi atribut matkul dan nama
-    // Konstruktor kelas induk dipanggil dengan parent::__construct($nama)
-    public function __construct($nama, $matkul)
-    {
-        // Memanggil konstruktor kelas induk untuk menginisialisasi atribut nama
-        parent::__construct($nama); // Mengatur nilai atribut $nama dengan memanggil konstruktor kelas induk (Pengguna)
-        // Menginisialisasi atribut matkul
-        $this->matkul = $matkul; // Inisialisasi properti $matkul dengan nilai parameter $matkul
-    }
+// Memanggil metode tampilkanData untuk menampilkan data mahasiswa dan mencetaknya ke layar
+echo $mhs1->tampilkanData(); // Menampilkan data mahasiswa pertama kali
 
-    // Override metode aksesFitur untuk memberikan fungsionalitas khusus bagi Dosen
-    public function aksesFitur()
-    {
-        return "Edit Nilai"; // Mengembalikan string khusus untuk akses fitur dosen
-    }
+echo "<br> <br> Setelah update data <br> <br>"; // Menampilkan pesan setelah perubahan data
 
-    // Metode untuk mendapatkan informasi dosen, termasuk nama dan mata kuliah yang diampu
-    public function getDosen()
-    {
-        return "<br>Nama : " . $this->getNama() . "<br> Matkul : " . $this->matkul; 
-        // Mengembalikan string yang berisi nama dosen dan mata kuliah yang diampu
-        // Menggunakan metode getNama() untuk mendapatkan nilai $nama dari kelas induk
-    }
-}
+// Mengubah NIM mahasiswa menggunakan metode setNim
+$mhs1->setNim("230302022"); // Mengubah NIM dari "230302013" menjadi "230302022"
 
-// Definisi Kelas Mahasiswa yang merupakan turunan dari kelas Pengguna
-// Kelas Mahasiswa mewarisi properti dan metode dari kelas Pengguna
-class Mahasiswa extends Pengguna
-{
-    // Konstruktor untuk menginisialisasi atribut nama
-    // Konstruktor kelas induk dipanggil dengan parent::__construct($nama)
-    public function __construct($nama)
-    {
-        // Memanggil konstruktor kelas induk untuk menginisialisasi atribut nama
-        parent::__construct($nama); // Mengatur nilai atribut $nama dengan memanggil konstruktor kelas induk (Pengguna)
-    }
+// Mengubah jurusan mahasiswa menggunakan metode updateJurusan
+$mhs1->updateJurusan("Teknik Elektro"); // Mengubah jurusan dari "Komputer dan Bisnis" menjadi "Teknik Elektro"
 
-    // Override metode aksesFitur untuk memberikan fungsionalitas khusus bagi Mahasiswa
-    public function aksesFitur()
-    {
-        return "Lihat Nilai"; // Mengembalikan string khusus untuk akses fitur mahasiswa
-    }
-}
-
-// Instansiasi objek dari kelas Dosen
-$dosen = new Dosen("Pak Riyadi", "Sistem Informasi Managemen");
-// Objek ini mewakili seorang dosen dengan nama "Pak Riyadi" dan mata kuliah "Sistem Informasi Managemen"
-
-// Memanggil metode aksesFitur untuk objek dosen dan mencetak hasilnya
-echo "Fitur Dosen : " . $dosen->aksesFitur();
-// Menampilkan fitur yang bisa diakses oleh dosen, yaitu "Edit Nilai"
-
-// Instansiasi objek dari kelas Mahasiswa
-$mhs = new Mahasiswa("Ilham");
-// Objek ini mewakili seorang mahasiswa dengan nama "Ilham"
-
-// Memanggil metode aksesFitur untuk objek mahasiswa dan mencetak hasilnya
-echo "<br>Fitur Mahasiswa : " . $mhs->aksesFitur();
-// Menampilkan fitur yang bisa diakses oleh mahasiswa, yaitu "Lihat Nilai"
-
-// Memanggil metode getDosen untuk mendapatkan informasi dosen dan mencetak hasilnya
-echo $dosen->getDosen();
-// Menampilkan informasi dosen termasuk nama dan mata kuliah yang diampu
+// Menampilkan data mahasiswa setelah perubahan
+echo $mhs1->tampilkanData(); // Menampilkan data mahasiswa yang telah diperbarui
 ?>
 ```
 ![Class and Object](Jobsheet-1/assets/PenggunaanAtribut.png)
+
+## TUGAS
+```php
+
+<?php
+// Definisi Class Dosen
+// Membuat kelas Dosen yang merepresentasikan entitas dosen
+class Dosen
+{
+    // Atribut atau Properties
+    // Atribut ini bersifat public sehingga dapat diakses dari luar kelas
+    public $nama;        // Properti yang menyimpan nama dosen
+    public $nip;         // Properti yang menyimpan nomor induk pegawai (NIP) dosen
+    public $mataKuliah;  // Properti yang menyimpan mata kuliah yang diampu oleh dosen
+
+    // Constructor
+    // Constructor ini digunakan untuk menginisialisasi objek dengan nilai awal untuk nama, nip, dan mata kuliah
+    public function __construct($nama, $nip, $mataKuliah)
+    {
+        // Mengatur nilai properti berdasarkan parameter yang diterima
+        $this->nama = $nama;              // Inisialisasi properti $nama dengan nilai parameter $nama
+        $this->nip = $nip;                // Inisialisasi properti $nip dengan nilai parameter $nip
+        $this->mataKuliah = $mataKuliah;  // Inisialisasi properti $mataKuliah dengan nilai parameter $mataKuliah
+    }
+
+    // Metode atau Function
+    // Metode ini menampilkan data dosen dalam bentuk string
+    public function tampilkanDosen()
+    {
+        // Mengembalikan string yang berisi informasi nama, NIP, dan mata kuliah dosen
+        return "Nama : $this->nama <br> NIP : $this->nip <br> Mata Kuliah : $this->mataKuliah";
+    }
+}
+
+// Instansiasi Objek
+// Membuat objek baru dari kelas Dosen dan memberikan nilai awal untuk nama, NIP, dan mata kuliah
+$dosen = new Dosen("Pak Riyadi", "123456123", "Sistem Informasi Managemen");
+
+// Memanggil metode tampilkanDosen untuk menampilkan data dosen dan mencetaknya ke layar
+echo $dosen->tampilkanDosen();
+?>
+```
+![Class and Object](Jobsheet-1/assets/Tugas.png)
