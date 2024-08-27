@@ -11,7 +11,8 @@ class Dosen
 
     // Constructor
     // Constructor ini digunakan untuk menginisialisasi objek dengan nilai awal untuk nama, nip, dan mata kuliah
-    public function __construct($nama, $nip, $mataKuliah) {
+    public function __construct($nama, $nip, $mataKuliah)
+    {
         // Mengatur nilai properti berdasarkan parameter yang diterima
         $this->nama = $nama;              // Inisialisasi properti $nama dengan nilai parameter $nama
         $this->nip = $nip;                // Inisialisasi properti $nip dengan nilai parameter $nip
@@ -20,7 +21,8 @@ class Dosen
 
     // Metode atau Function
     // Metode ini menampilkan data dosen dalam bentuk string
-    public function tampilkanDosen(){
+    public function tampilkanDosen()
+    {
         // Mengembalikan string yang berisi informasi nama, NIP, dan mata kuliah dosen
         return "Nama : $this->nama <br> NIP : $this->nip <br> Mata Kuliah : $this->mataKuliah";
     }

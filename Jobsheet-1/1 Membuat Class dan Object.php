@@ -11,7 +11,8 @@ class Mahasiswa
 
     // Metode atau Function
     // Metode ini menampilkan data mahasiswa dalam bentuk string
-    public function tampilkanData(){
+    public function tampilkanData()
+    {
         // Mengembalikan string yang berisi informasi nama, nim, dan jurusan mahasiswa
         return "Nama : $this->nama <br> NIM : $this->nim <br> Jurusan : $this->jurusan";
     }
