@@ -23,6 +23,16 @@ class Mahasiswa
         // Mengembalikan string yang berisi informasi nama, nim, dan jurusan mahasiswa
         return "Nama : $this->nama <br> NIM : $this->nim <br> Jurusan : $this->jurusan";
     }
+
+    public function updateJurusan($jurusan)
+    {
+        $this->jurusan = $jurusan;
+    }
+
+    public function setNim($nimbaru)
+    {
+        $this->nim = $nimbaru;
+    }
 }
 
 // Instansiasi Objek
@@ -30,5 +40,13 @@ class Mahasiswa
 $mhs1 = new Mahasiswa("Ilham Budimansyah", "230302013", "Komputer dan Bisnis");
 
 // Memanggil metode tampilkanData untuk menampilkan data mahasiswa dan mencetaknya ke layar
+echo $mhs1->tampilkanData();
+
+echo "<br> <br> Setelah update data <br> <br>";
+
+$mhs1->setNim("230302022");
+
+$mhs1->updateJurusan("Teknik Elektro");
+
 echo $mhs1->tampilkanData();
 ?>

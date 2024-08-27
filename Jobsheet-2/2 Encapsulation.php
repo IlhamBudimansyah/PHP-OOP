@@ -1,6 +1,7 @@
 <?php
 // Mendefinisikan kelas Mahasiswa
-class Mahasiswa {
+class Mahasiswa 
+{
     // Properti bersifat private sehingga hanya dapat diakses dari dalam kelas
     private $nama;
     private $nim;
