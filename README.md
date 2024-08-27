@@ -100,6 +100,7 @@ echo $mhs1->getNim(). "<br>";
 echo $mhs1->getJurusan();
 ?>
 ```
+![Class and Object](Jobsheet-1/assets/Encapsulation.png)
 
 ## Inheritance
 ```php
@@ -160,6 +161,8 @@ $dosen = new Dosen("Pak Riyadi", "Sistem Informasi Managemen");
 echo $dosen->getDosen();
 ?>
 ```
+![Class and Object](Jobsheet-1/assets/Inheritance.png)
+
 
 ## Polymorphism
 ```php
@@ -254,6 +257,8 @@ echo "<br>Fitur Mahasiswa : " . $mhs->aksesFitur();
 echo $dosen->getDosen();
 ?>
 ```
+![Class and Object](Jobsheet-1/assets/Polymorphism.png)
+
 
 ## Abstraction
 ```php
@@ -343,3 +348,5 @@ $dosen->aksesFitur();
 $mhs->aksesFitur();
 ?>
 ```
+![Class and Object](Jobsheet-1/assets/Abstraction.png)
+
