@@ -7,15 +7,6 @@ class Mahasiswa {
     public $nim;
     public $jurusan;
 
-    // Constructor
-    // Constructor ini digunakan untuk menginisialisasi objek dengan nilai awal untuk nama, nim, dan jurusan
-    public function __construct($nama, $nim, $jurusan) {
-        // Mengatur nilai properti berdasarkan parameter yang diterima
-        $this->nama = $nama;
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
-    }
-
     // Metode atau Function
     // Metode ini menampilkan data mahasiswa dalam bentuk string
     public function tampilkanData(){
