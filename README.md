@@ -37,7 +37,7 @@ $mhs1 = new Mahasiswa("Ilham Budimansyah", "230302013", "Komputer dan Bisnis");
 echo $mhs1->tampilkanData();
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/ClassandObject.png)
+![Class and Object](Jobsheet-2/assets/ClassandObject.png)
 ## Encapsulation
 ```php
 <?php
@@ -100,7 +100,7 @@ echo $mhs1->getNim(). "<br>";
 echo $mhs1->getJurusan();
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/Encapsulation.png)
+![Class and Object](Jobsheet-2/assets/Encapsulation.png)
 
 ## Inheritance
 ```php
@@ -161,7 +161,7 @@ $dosen = new Dosen("Pak Riyadi", "Sistem Informasi Managemen");
 echo $dosen->getDosen();
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/Inheritance.png)
+![Class and Object](Jobsheet-2/assets/Inheritance.png)
 
 
 ## Polymorphism
@@ -257,7 +257,7 @@ echo "<br>Fitur Mahasiswa : " . $mhs->aksesFitur();
 echo $dosen->getDosen();
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/Polymorphism.png)
+![Class and Object](Jobsheet-2/assets/Polymorphism.png)
 
 
 ## Abstraction
@@ -348,5 +348,5 @@ $dosen->aksesFitur();
 $mhs->aksesFitur();
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/Abstraction.png)
+![Class and Object](Jobsheet-2/assets/Abstraction.png)
 
