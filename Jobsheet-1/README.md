@@ -32,7 +32,7 @@ $mhs1 = new Mahasiswa("Ilham Budimansyah", "230302013", "Komputer dan Bisnis");
 echo $mhs1->tampilkanData();
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/MembuatClassAndObject.png)
+![Class and Object](assets/MembuatClassAndObject.png)
 
 ## Implementasi Constructor
 ```php
