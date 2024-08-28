@@ -14,7 +14,7 @@ class Mahasiswa
     public function __construct($nama, $nim, $jurusan)
     {
         // Mengatur nilai properti berdasarkan parameter yang diterima
-        $this->nama = $nama;       // Inisialisasi properti $nama dengan nilai parameter $nama
+        $this->nama = $nama;       // Inisialisasi properti $nama dengan nilai parameter $namaP
         $this->nim = $nim;         // Inisialisasi properti $nim dengan nilai parameter $nim
         $this->jurusan = $jurusan; // Inisialisasi properti $jurusan dengan nilai parameter $jurusan
     }
