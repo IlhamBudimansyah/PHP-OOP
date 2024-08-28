@@ -42,7 +42,7 @@ $murid->studentID = "1613";
 echo $murid->getStudentId();
 ?>
 ```
-![Class and Object](Jobsheet-3/assets/Inheritance.png)
+![Class and Object](assets/Inheritance.png)
 
 ## Polymorphism
 
@@ -131,7 +131,7 @@ $dosen = new Teacher("Xehanort", "0101");
 echo $dosen->getName();
 ?>
 ```
-![Class and Object](Jobsheet-3/assets/Polymorphism.png)
+![Class and Object](assets/Polymorphism.png)
 
 ## Encapsulation
 
@@ -226,7 +226,7 @@ $mhs->setStudentId("1613");
 echo "<br> ID : " . $mhs->getStudentId();
 ?>
 ```
-![Class and Object](Jobsheet-3/assets/Encapsulation.png)
+![Class and Object](assets/Encapsulation.png)
 
 
 ## Abstraction
@@ -298,7 +298,7 @@ $offline = new OfflineCourse("Bahasa Inggris Grammar", "Cilacap");
 echo $offline->getCourseDetails();
 ?>
 ```
-![Class and Object](Jobsheet-3/assets/Abstraction.png)
+![Class and Object](assets/Abstraction.png)
 
 
 ## Abstraction
@@ -474,4 +474,4 @@ $JurnalMahasiswa = new JournalStudent("Cara Menjadi Pro Player Mobile Legends", 
 echo $JurnalMahasiswa->SubmitJournal() . "<br>";
 ?>
 ```
-![Class and Object](Jobsheet-3/assets/Tugas.png)
+![Class and Object](assets/Tugas.png)

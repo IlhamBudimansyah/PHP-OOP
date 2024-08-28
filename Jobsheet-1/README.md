@@ -32,7 +32,7 @@ $mhs1 = new Mahasiswa("Ilham Budimansyah", "230302013", "Komputer dan Bisnis");
 echo $mhs1->tampilkanData();
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/MembuatClassAndObject.png)
+![Class and Object](assets/MembuatClassAndObject.png)
 
 ## Implementasi Constructor
 ```php
@@ -104,7 +104,7 @@ echo $mhs1->getNim(). "<br>";
 echo $mhs1->getJurusan();
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/Implementasi.png)
+![Class and Object](assets/Implementasi.png)
 
 ## Membuat Metode Tambahan
 ```php
@@ -167,7 +167,7 @@ $dosen = new Dosen("Pak Riyadi", "Sistem Informasi Managemen");
 echo $dosen->getDosen(); // Menampilkan informasi dosen ke layar
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/MetodeTambahan.png)
+![Class and Object](assets/MetodeTambahan.png)
 
 ## Penggunaan Atribut dan Metode
 ```php
@@ -234,7 +234,7 @@ $mhs1->updateJurusan("Teknik Elektro"); // Mengubah jurusan dari "Komputer dan B
 echo $mhs1->tampilkanData(); // Menampilkan data mahasiswa yang telah diperbarui
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/PenggunaanAtribut.png)
+![Class and Object](assets/PenggunaanAtribut.png)
 
 ## TUGAS
 ```php
@@ -277,4 +277,4 @@ $dosen = new Dosen("Pak Riyadi", "123456123", "Sistem Informasi Managemen");
 echo $dosen->tampilkanDosen();
 ?>
 ```
-![Class and Object](Jobsheet-1/assets/Tugas.png)
+![Class and Object](assets/Tugas.png)
