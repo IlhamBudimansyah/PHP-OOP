@@ -277,4 +277,8 @@ $dosen = new Dosen("Pak Riyadi", "123456123", "Sistem Informasi Managemen");
 echo $dosen->tampilkanDosen();
 ?>
 ```
+<<<<<<< HEAD
 ![Class and Object](assets/Tugas.png)
+=======
+![Class and Object](Jobsheet-1/assets/Tugas.png)
+>>>>>>> 268ed45f6596bd8e25ea7e892da99b0cbe0ee1ab
