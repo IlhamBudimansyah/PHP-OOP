@@ -301,7 +301,7 @@ echo $offline->getCourseDetails();
 ![Class and Object](assets/Abstraction.png)
 
 
-## Abstraction
+## Tugas
 ```php
 <?php
 

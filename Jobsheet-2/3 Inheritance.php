@@ -33,11 +33,11 @@ class Dosen extends Pengguna
     // Konstruktor ini digunakan untuk menginisialisasi atribut nama dan matkul
     public function __construct($nama, $matkul)
     {
-        // Mengatur nilai atribut matkul
-        $this->matkul = $matkul; // Inisialisasi properti $matkul dengan nilai parameter $matkul
-
         // Mengatur nilai atribut nama dengan memanggil konstruktor kelas induk
         parent::__construct($nama); // Memanggil konstruktor kelas induk (Pengguna) untuk mengatur nilai $nama
+     
+        // Mengatur nilai atribut matkul
+        $this->matkul = $matkul; // Inisialisasi properti $matkul dengan nilai parameter $matkul
     }
 
     // Metode public untuk menampilkan informasi dosen
