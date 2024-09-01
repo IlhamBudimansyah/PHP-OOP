@@ -1,4 +1,4 @@
-# DOKUMENTASI OOP JOBSHEET 2
+# DOKUMENTASI OOP JOBSHEET 1
 Pemrograman berorientasi objek (Inggris: object-oriented programming disingkat OOP) merupakan paradigma pemrograman berdasarkan konsep "objek", yang dapat berisi data, dalam bentuk field atau dikenal juga sebagai atribut; serta kode, dalam bentuk fungsi/prosedur atau dikenal juga sebagai method. Semua data dan fungsi di dalam paradigma ini dibungkus dalam kelas-kelas atau objek-objek. Bandingkan dengan logika pemrograman terstruktur. Setiap objek dapat menerima pesan, memproses data, dan mengirim pesan ke objek lainnya
 
 ## Membuat Class dan Object
@@ -277,8 +277,4 @@ $dosen = new Dosen("Pak Riyadi", "123456123", "Sistem Informasi Managemen");
 echo $dosen->tampilkanDosen();
 ?>
 ```
-<<<<<<< HEAD
 ![Class and Object](assets/Tugas.png)
-=======
-![Class and Object](Jobsheet-1/assets/Tugas.png)
->>>>>>> 268ed45f6596bd8e25ea7e892da99b0cbe0ee1ab
